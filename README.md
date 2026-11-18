@@ -1,5 +1,7 @@
 # Análise Exploratória de Dados de Varejo com Python
 
+[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/RodriguesProject/Thiago_Rodrigues_Analise_Varejo_T8/tests.yml?branch=main&label=tests)](https://github.com/RodriguesProject/Thiago_Rodrigues_Analise_Varejo_T8/actions/workflows/tests.yml)
+
 [![Python](https://img.shields.io/badge/Python-EDA-blue)](https://www.python.org/)
 [![Pandas](https://img.shields.io/badge/Biblioteca-Pandas-150458)](https://pandas.pydata.org/)
 [![Notebook](https://img.shields.io/badge/Ambiente-Google%20Colab%20%7C%20Jupyter-orange)](https://jupyter.org/)
