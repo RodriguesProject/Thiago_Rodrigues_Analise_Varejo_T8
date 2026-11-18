@@ -166,3 +166,30 @@ Estudo demonstrativo de **Retail Analytics, Exploratory Data Analysis e Data Qua
 ---
 
 **Portfolio focus:** Retail Analytics · Exploratory Data Analysis · Data Quality · Python · Pandas
+
+
+## Pipeline reproduzível e testes automatizados
+
+Foi acrescentado o módulo `analise_varejo.py`, que separa carregamento, validação estrutural, preparação, diagnóstico de qualidade, tabelas descritivas, exportação e gráficos. O fluxo preserva os dados de origem e não remove duplicidades automaticamente.
+
+### Instalação e execução
+
+```bash
+pip install -r requirements.txt
+python analise_varejo.py --input "Base Varejo.csv" --output-dir outputs
+```
+
+Parâmetros opcionais: `--sep` (padrão `;`) e `--encoding` (padrão `utf-8-sig`). A base deve conter as dez colunas descritas neste README.
+
+### Arquivos gerados
+
+- `resumo_analise.json`: dimensões e indicadores de qualidade.
+- `relatorio_qualidade.csv`: valores nulos e textos vazios por coluna.
+- `categorias.csv`, `segmento_a_categorias.csv` e `segmento_a_genero.csv`: tabelas descritivas.
+- `registros_por_categoria.png` e `registros_por_segmento.png`: visualizações.
+
+### Testes
+
+Execute `python -m unittest -v`. Os testes utilizam uma amostra sintética pequena para verificar a lógica e as exportações; não substituem a execução da base original de 830 mil linhas.
+
+O conjunto original de dados não está incluído no repositório. Assim, os resultados históricos da seção anterior continuam sendo os resultados registrados no notebook original; a reprodução independente desses números depende de executar o pipeline com a mesma base.
